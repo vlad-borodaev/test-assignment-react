@@ -1,0 +1,8 @@
+.countButton {
+  width: 25px;
+  height: 25px;
+  background-color: rgba(245, 245, 245, 0.1);
+  &:hover {
+    background-color: rgba(180, 177, 177, 0.8);
+  }
+}

@@ -1,0 +1,15 @@
+.productSelectWrapper {
+  width: 100%;
+  .productSelectContainer {
+    padding-top: 20px;
+    .productSelector {
+      width: 100%;
+      padding: 0 10px;
+      .productText {
+        font-size: 16px;
+        padding-bottom: 10px;
+        color: rgb(82, 82, 82);
+      }
+    }
+  }
+}

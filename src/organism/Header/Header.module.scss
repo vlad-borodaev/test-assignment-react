@@ -1,0 +1,15 @@
+@import "src/assets/mixin.scss";
+
+.headerWrapper {
+  @include flexContent(
+    $fDirection: row,
+    $aItems: center,
+    $jContent: space-between,
+    $fWrap: nowrap
+  );
+  width: 100%;
+  min-height: 80px;
+  .headerTitle {
+    font-size: 30px;
+  }
+}

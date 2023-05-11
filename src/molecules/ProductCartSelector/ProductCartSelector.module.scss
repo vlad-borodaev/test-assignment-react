@@ -1,0 +1,12 @@
+@import "src/assets/mixin.scss";
+
+.productSelectorWrapper {
+  @include flexContent(
+    $fDirection: row,
+    $aItems: center,
+    $jContent: center,
+    $fWrap: nowrap
+  );
+  width: 100%;
+  gap: 10px;
+}

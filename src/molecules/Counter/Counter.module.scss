@@ -1,0 +1,17 @@
+@import "src/assets/mixin.scss";
+
+.counterWrapper {
+  @include flexContent(
+    $fDirection: row,
+    $aItems: center,
+    $jContent: center,
+    $fWrap: nowrap
+  );
+  min-width: 20px;
+  height: 25px;
+  background-color: rgba(131, 131, 131, 0.5);
+  .counterText {
+    font-size: 14px;
+    font-weight: 700;
+  }
+}
