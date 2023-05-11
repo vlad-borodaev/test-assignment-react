@@ -14,24 +14,22 @@ export const CartTemplate = () => {
 
   const [addedProduct, setAddedProduct] = useState<any>([]);
 
+  const getAllFruitsUrl = "https://fruityvice.com/api/fruit/all";
+
   useEffect(() => {
-    axios
-      .get("https://fruityvice.com/api/fruit/all")
-      .then((response) => setProducts(response.data));
+    axios.get("/api/all").then((response) => setProducts(response.data));
   }, []);
 
   useEffect(() => {
     if (selectProductId) {
-      axios
-        .get(`https://fruityvice.com/api/fruit/${selectProduct}`)
-        .then((response) => {
-          const selectedRows = {
-            id: response.data.id,
-            name: response.data.name,
-          };
+      axios.get(`/api/${selectProduct}`).then((response) => {
+        const selectedRows = {
+          id: response.data.id,
+          name: response.data.name,
+        };
 
-          setAddedProduct([...addedProduct, selectedRows]);
-        });
+        setAddedProduct([...addedProduct, selectedRows]);
+      });
     }
   }, [selectProduct]);
 
